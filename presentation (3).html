@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Интерактивная презентация: Подготовка к защите проекта</title>
+<style>
+body{margin:0;font-family:Segoe UI,Arial;background:linear-gradient(135deg,#0f172a,#1e3a8a);color:#fff}
+.slide{display:none;min-height:100vh;padding:40px;box-sizing:border-box}
+.active{display:flex;flex-direction:column;justify-content:center;align-items:center}
+.card{background:rgba(255,255,255,.1);backdrop-filter:blur(8px);padding:20px;border-radius:20px;max-width:1000px}
+.menu{display:grid;grid-template-columns:repeat(2,1fr);gap:15px;margin-top:20px}
+.btn{background:#2563eb;padding:15px;border-radius:12px;color:#fff;text-decoration:none;font-weight:bold;text-align:center}
+.btn:hover{background:#3b82f6}
+.back{margin-top:20px;display:inline-block;background:#22c55e;padding:12px 20px;border-radius:10px;color:#fff;text-decoration:none}
+img{max-width:500px;border-radius:15px;margin:15px}
+h1,h2{text-align:center}
+</style>
+<script>
+function show(id){
+document.querySelectorAll('.slide').forEach(s=>s.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+</script>
+</head>
+<body>
+
+<div id="home" class="slide active">
+<div class="card">
+<h1>Подготовка к защите проекта</h1>
+<p>Выберите этап (шаги расположены вперемешку согласно заданию).</p>
+<div class="menu">
+<a class="btn" href="#" onclick="show('s5')">Репетиция выступления</a>
+<a class="btn" href="#" onclick="show('s1')">Анализ требований</a>
+<a class="btn" href="#" onclick="show('s4')">Подготовка ответов на вопросы</a>
+<a class="btn" href="#" onclick="show('s2')">Сбор и систематизация материалов</a>
+<a class="btn" href="#" onclick="show('s6')">Психологическая подготовка</a>
+<a class="btn" href="#" onclick="show('s3')">Подготовка презентации</a>
+</div>
+</div>
+</div>
+
+<div id="s1" class="slide"><div class="card"><h2>Анализ требований</h2><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800"><p>Изучите критерии оценки, регламент защиты, требования к продукту проекта и презентации.</p><a class="back" href="#" onclick="show('home')">На главный слайд</a></div></div>
+
+<div id="s2" class="slide"><div class="card"><h2>Сбор и систематизация материалов</h2><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800"><p>Подберите достоверные источники, статистику, изображения и результаты исследования.</p><a class="back" href="#" onclick="show('home')">На главный слайд</a></div></div>
+
+<div id="s3" class="slide"><div class="card"><h2>Подготовка презентации</h2><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800"><p>Создайте лаконичные слайды: тема, цель, задачи, результаты, выводы.</p><a class="back" href="#" onclick="show('home')">На главный слайд</a></div></div>
+
+<div id="s4" class="slide"><div class="card"><h2>Подготовка ответов на вопросы</h2><img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800"><p>Продумайте возможные вопросы комиссии и подготовьте аргументированные ответы.</p><a class="back" href="#" onclick="show('home')">На главный слайд</a></div></div>
+
+<div id="s5" class="slide"><div class="card"><h2>Репетиция выступления</h2><img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=800"><p>Отработайте речь, соблюдайте регламент времени и уверенную подачу материала.</p><a class="back" href="#" onclick="show('home')">На главный слайд</a></div></div>
+
+<div id="s6" class="slide"><div class="card"><h2>Психологическая подготовка</h2><img src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?w=800"><p>Подготовьтесь морально: уверенность, спокойствие, контакт с аудиторией.</p><a class="back" href="#" onclick="show('home')">На главный слайд</a></div></div>
+
+</body></html>
